@@ -1,6 +1,6 @@
 <div class="content" *ngIf="!loginService.isLoggedIn()" style="width: 300px;">
   <input #name matInput placeholder="Username"><br>
-  <input #password matInput placeholder="Password"><br><br>
+  <input #password matInput placeholder="Password" type="password"><br><br>
   <button (click)="logIn(name.value, password.value)" mat-raised-button color="accent">Login</button>
 </div>
 

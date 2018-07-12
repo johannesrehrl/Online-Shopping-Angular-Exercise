@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TransactionComponent } from './transaction/transaction.component';
 import { LoginComponent } from './login/login.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AboutComponent,
     TransactionComponent,
     LoginComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

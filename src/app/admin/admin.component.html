@@ -1,0 +1,15 @@
+<div class="content">
+  <a *ngIf="loginService.getCurrentUser()">
+    <a *ngIf="loginService.getCurrentUser().admin === true">
+      
+    </a>
+
+    <a *ngIf="loginService.getCurrentUser().admin === false">
+      You are not an admin!
+    </a>
+  </a>
+
+  <a *ngIf="!loginService.getCurrentUser()">
+    You are not an admin!
+  </a>
+</div>
