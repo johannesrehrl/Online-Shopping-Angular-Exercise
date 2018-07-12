@@ -1,0 +1,20 @@
+<div class="content">
+  <div *ngFor="let product of products" style="padding-top: 10px; width: 500px;">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Product: <b>{{product.name}}</b>
+          <button mat-icon-button color="primary" (click)="addToCart(product.id)">
+            +
+          </button>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          P.Nr.: {{product.id}} <br>
+          Price: {{product.price}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

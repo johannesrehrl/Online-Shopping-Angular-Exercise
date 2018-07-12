@@ -1,0 +1,12 @@
+<div class="header" >
+  <div style="padding-top: 15px; padding-left: 15px;">
+    <button mat-raised-button routerLink="/home" color="primary">Home</button>
+    <button mat-raised-button routerLink="/products" color="primary" style="margin-left: 10px;">Product List</button>
+    <button mat-raised-button routerLink="/shopping-cart" color="primary" style="margin-left: 10px;">Shopping Cart</button>
+    <button mat-raised-button routerLink="/about" color="primary" style="margin-left: 10px;">About</button>
+    <button *ngIf="!loginService.isLoggedIn()" mat-raised-button routerLink="/login" color="primary" style="margin-left: 10px;">Login</button>
+    <button *ngIf="loginService.isLoggedIn()" mat-raised-button (click)="logout()" color="primary" style="margin-left: 10px;">Logout</button>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

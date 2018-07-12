@@ -1,0 +1,20 @@
+<div class="content" style="width: 1000px; padding-top: 10px;">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <b>Your Shopping Cart</b>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <a *ngFor="let item of shoppingCartItems">
+        Name: {{item.name}}<br>
+        P.Nr.: {{item.id}}<br>
+        Price: {{item.price}}<br><br>
+      </a>
+      <br>
+      <b><i>Total price: {{totalPrice}}</i></b>
+      <br><br>
+      <button routerLink="/transaction" mat-raised-button color="primary">Buy items in the cart</button>
+    </mat-card-content>
+  </mat-card>
+</div>
