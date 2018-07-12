@@ -14,18 +14,19 @@ export class AdminComponent implements OnInit {
 
   constructor(public loginService: LoginService, public productService: ProductService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   addProduct(name: string, price: number,): void {
     this.unique = true;
 
+    // Checks if a product with the same name already exists.
     for (let i = 0; i < this.productService.getProducts().length; i++) {
       if (name === this.productService.getProducts()[i].name) {
         this.unique = false;
       }
     }
 
+    // Adding product if it meets the requirements.
     if (name && price && this.unique) {
       this.productService.getProducts().push(
         new Product(this.productService.getProducts()[this.productService.getProducts().length - 1].id + 1, name, price)
@@ -40,6 +41,7 @@ export class AdminComponent implements OnInit {
   deleteProduct(name: string, password: string): void {
     this.deleted = false;
 
+    // Deleting product if the password matches and a correct name was entered.
     if (password === this.loginService.getCurrentUser().password) {
       for (let i = 0; i < this.productService.getProducts().length; i++) {
         if (this.productService.getProducts()[i].name === name) {

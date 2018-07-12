@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Logging in user if name and password match with data from the mock-users.
   logIn(name: string, password: string): void {
     for (let i = 0; i < this.loginService.getAllUsers().length; i++) {
       if (this.loginService.getAllUsers()[i].logIn(name, password)) {

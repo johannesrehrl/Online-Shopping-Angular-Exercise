@@ -16,6 +16,7 @@ export class ProductListComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
+  // Adding a product from the list to the cart.
   addToCart(id: number): void{
     this.productService.getShoppingCart().push(this.products[id]);
     alert(this.products[id].name + ' added to your cart!');

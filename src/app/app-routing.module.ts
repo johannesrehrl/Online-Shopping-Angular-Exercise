@@ -8,7 +8,9 @@ import { TransactionComponent } from './transaction/transaction.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 
+// Routes to all component views.
 const routes: Routes = [
+  // When no route is selected redirect to /home view automatically.
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductListComponent },
