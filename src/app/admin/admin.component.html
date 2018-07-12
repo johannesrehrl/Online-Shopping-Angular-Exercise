@@ -1,9 +1,20 @@
 <div class="content">
   <a *ngIf="loginService.getCurrentUser()">
     <a *ngIf="loginService.getCurrentUser().admin === true">
-      
-    </a>
+      <h3>Add new Product</h3>
+      Name:<br>
+      <input #nameAdd matInput><br>
+      Price:<br>
+      <input type="number" #price matInput><br><br>
+      <button (click)="addProduct(nameAdd.value, price.value); nameAdd.value=''; price.value=''" mat-raised-button color="primary">Add</button>
 
+      <h3>Delete Product</h3>
+      Name:<br>
+      <input #nameDel matInput><br>
+      Admin password:<br>
+      <input type="password" #password matInput><br><br>
+      <button (click)="deleteProduct(nameDel.value, password.value); nameDel.value=''; password.value=''" mat-raised-button color="primary">Delete</button>
+    </a>
     <a *ngIf="loginService.getCurrentUser().admin === false">
       You are not an admin!
     </a>
