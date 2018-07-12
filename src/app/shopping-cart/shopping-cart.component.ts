@@ -23,4 +23,7 @@ export class ShoppingCartComponent implements OnInit {
     }
   }
 
+  removeItem(id: number): void {
+    delete this.productService.getShoppingCart()[id];
+  }
 }

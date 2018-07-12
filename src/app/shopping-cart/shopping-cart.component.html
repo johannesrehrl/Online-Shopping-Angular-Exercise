@@ -6,9 +6,9 @@
       </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <a *ngFor="let item of shoppingCartItems">
+      <a *ngFor="let item of shoppingCartItems; let i = index">
         Name: {{item.name}}<br>
-        P.Nr.: {{item.id}}<br>
+        P.Nr.: {{item.id}} <button (click)="removeItem(i)"  mat-icon-button color="warn">X</button><br>
         Price: {{item.price}}<br><br>
       </a>
       <br>
